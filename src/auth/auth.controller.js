@@ -1,62 +1,62 @@
-import { hash, verify } from "argon2";
+import { hash, verify } from "argon2"
+import User from "../user/user.model.js"
 import { generateJWT } from "../helpers/generate-jwt.js";
 
-export const registro = async (req, res) => {
-    try{
-        const data = req.body
+export const register = async (req, res) => {
+    try {
+        const data = req.body;
+        const encryptedPassword = await hash(data.password)
+        data.password = encryptedPassword
 
-        const encryptedPassword = await hash(data.contraseña)
-        data.contraseña = encryptedPassword
-        const usuario = await Usuario.create(data);
+        const user = await User.create(data);
 
         return res.status(201).json({
-            message: "Usuario registrado",
-            nombre: usuario.nombre,
-            email: usuario.email,
-        })
-    }catch(err){
+            message: "User has been created",
+            name: user.name,
+            email: user.email
+        });
+    } catch (err) {
         return res.status(500).json({
-            message: "Usuario no registrado",
-            success: err.message
-        })
+            message: "User registration failed",
+            error: err.message
+        });
     }
 }
 
 export const login = async (req, res) => {
-    const {email, nombreUsuario, contraseña} = req.body 
-    try {
-        const usuario = await Usuario.findOne({
-            $or: [{email: email}, {nombreUsuario: nombreUsuario}]
+    const { email, username, password } = req.body
+    try{
+        const user = await User.findOne({
+            $or:[{email: email}, {username: username}]
         })
-        console.log(usuario)
-        if(!usuario){
+
+        if(!user){
             return res.status(400).json({
-                message: "Credenciales incorrectas",
-                error: "No existe el usuario o correo electrónico"
+                message: "Crendenciales inválidas",
+                error:"No existe el usuario o correo ingresado"
             })
         }
 
-        const validacionContraseña = await verify(usuario.contraseña, contraseña)
+        const validPassword = await verify(user.password, password)
 
-        if(!validacionContraseña){
+        if(!validPassword){
             return res.status(400).json({
-                message: "Credenciales incorrectas",
+                message: "Crendenciales inválidas",
                 error: "Contraseña incorrecta"
             })
         }
 
-        const token = await generateJWT(usuario.id)
+        const token = await generateJWT(user.id)
 
-        
         return res.status(200).json({
-            message: "Credenciales correctas",
-            usuariosDetallados:{
-                token: token
+            message: "Login successful",
+            userDetails: {
+                token: token,
             }
         })
-    } catch (err) {
+    }catch(err){
         return res.status(500).json({
-            message: "Login fallido, error con el servidor",
+            message: "login failed, server error",
             error: err.message
         })
     }

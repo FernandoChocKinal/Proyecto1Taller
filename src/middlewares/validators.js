@@ -1,63 +1,75 @@
-import { body, check } from "express-validator";
-import { emailExists, nombreUsuarioExists, usuarioExiste } from "../helpers/db-validators.js";
-import { validarCampos } from "./validar-campos.js"
-import { deleteFileOnError } from "./delete-file-on-error.js"
+import { body, param } from "express-validator";
+import { emailExists, usernameExists, userExists } from "../helpers/db-validators.js";
+import { validarCampos } from "./validar-campos.js";
+import { deleteFileOnError } from "./delete-file-on-error.js";
+import { handleErrors } from "./handle-errors.js";
+import { validateJWT } from "./validate-jwt.js";
+import { hasRoles } from "./validate-roles.js";
 
 export const registerValidator = [
-    body("nombre").not().isEmpty().withMessage("Nombre obligatorio"),
-    body("apellido").not().isEmpty().withMessage("Apellido obligatorio"),
-    body("nombreUsuario").not().isEmpty().withMessage("Nombre de usuario obligatorio"),
-    body("email").not().isEmpty().withMessage("Email obligatorio"),
-    body("email").isEmail().withMessage("Email invalido"),
+    body("name").notEmpty().withMessage("El nombre es requerido"),
+    body("username").notEmpty().withMessage("El username es requerido"),
+    body("email").notEmpty().withMessage("El email es requerido"),
+    body("email").isEmail().withMessage("No es un email válido"),
     body("email").custom(emailExists),
-    body("nombreUsuario").custom(nombreUsuarioExists),
-    body("contraseña"),
-    validarCampos
-
+    body("username").custom(usernameExists),
+    body("password"),
+    validarCampos,
+    deleteFileOnError,
+    handleErrors
 ] 
 
 export const loginValidator = [
-    body("email").optional().isEmail().withMessage("Email invalido"),
-    body("nombreUsuario").optional().isString().withMessage("Nombre de usuario invalido"),
-    body("contraseña").isLength({min: 4}).withMessage("La contraseña debe tener al menos 8 caracteres"),
-    validarCampos
-]
-
-export const getUsuarioByIdValidator = [
-    check("uid").isMongoId().withMessage("No es un id valido"),
-    check("uid").custom(usuarioExiste),
+    body("email").optional().isEmail().withMessage("No es un email válido"),
+    body("username").optional().isString().withMessage("Username es en formáto erróneo"),
+    body("password").isLength({ min: 2 }).withMessage("El password debe contener al menos 2 caracteres"),
     validarCampos,
-    deleteFileOnError
+    handleErrors
+];
 
-]
-
-export const deleteUsuarioValidator = [
-    check("uid").isMongoId().withMessage("No es un id valido"),
-    check("uid").custom(usuarioExiste),
+export const getUserByIdValidator = [
+    param("uid").isMongoId().withMessage("No es un ID válido de MongoDB"),
+    param("uid").custom(userExists),
     validarCampos,
-    deleteFileOnError
+    handleErrors
+];
 
-] 
-
-export const updateContraseñaValidator = [
-    check("uid").isMongoId().withMessage("No es un id valido"),
-    check("uid").custom(usuarioExiste),
-    body("nuevaContraseña").isLength({min: 8}).withMessage("La contraseña debe tener al menos 8 caracteres"),
+export const deleteUserValidator = [
+    param("uid").isMongoId().withMessage("No es un ID válido de MongoDB"),
+    param("uid").custom(userExists),
     validarCampos,
-    deleteFileOnError
+    handleErrors
+];
 
-] 
-
-export const updateUsuarioValidator = [
-    check("uid").isMongoId().withMessage("No es un id valido"),
-    check("uid").custom(usuarioExiste),
-    body("nombre").not().isEmpty().withMessage("Nombre obligatorio"),
-    body("apellido").not().isEmpty().withMessage("Apellido obligatorio"),
-    body("nombreUsuario").not().isEmpty().withMessage("Nombre de usuario obligatorio"),
-    body("email").not().isEmpty().withMessage("Email obligatorio"),
-    body("email").isEmail().withMessage("Email invalido"),
-    body("email").custom(emailExists),
-    body("nombreUsuario").custom(nombreUsuarioExists),
+export const updatePasswordValidator = [
+    param("uid").isMongoId().withMessage("No es un ID válido de MongoDB"),
+    param("uid").custom(userExists),
+    body("newPassword").isLength({ min: 8 }).withMessage("El password debe contener al menos 8 caracteres"),
     validarCampos,
-    deleteFileOnError
-]
+    handleErrors
+];
+
+export const updateUserValidator = [
+    param("uid", "No es un ID válido").isMongoId(),
+    param("uid").custom(userExists),
+    validarCampos,
+    handleErrors
+];
+
+export const updateProfilePictureValidator = [
+    param("uid").isMongoId().withMessage("No es un ID válido de MongoDB"),
+    param("uid").custom(userExists),
+    validarCampos,
+    deleteFileOnError,
+    handleErrors
+];
+
+export const updateRoleValidator = [
+    validateJWT,
+    hasRoles("ADMIN_ROLE"),
+    param("uid").isMongoId().withMessage("No es un ID válido de MongoDB"),
+    param("uid").custom(userExists),
+    body("newRole").isString().withMessage("El rol debe ser una cadena de texto").isIn(["ADMIN_ROLE", "CLIENT_ROLE"]).withMessage("Rol no válido"),
+    validarCampos,
+    handleErrors
+];
