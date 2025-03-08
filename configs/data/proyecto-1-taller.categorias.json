@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "67cb68103bff613d1679fb72"
+  },
+  "nombre": "Categoria por defecto",
+  "descripcion": "Categoria por defecto para productos sin categoria",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67cb9e65f2cec9844833c2eb"
+  },
+  "nombre": "Alimentos y Bebidas",
+  "descripcion": "Toda variedad de productos y alimentos para la familia",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67cb9e99f2cec9844833c2ee"
+  },
+  "nombre": "Limpieza e Higiene",
+  "descripcion": "Todos los productos de limpieza para la casa y la higiene para el ser humano.",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67cb9f07f2cec9844833c2f4"
+  },
+  "nombre": "Salud",
+  "descripcion": "Medicamentos basicos de venta libre y vitaminas.",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67cb9f38f2cec9844833c2f7"
+  },
+  "nombre": "Ferreteria",
+  "descripcion": "De todo para las reparaciones del hogar!",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67cb9f63f2cec9844833c2fa"
+  },
+  "nombre": "Juguetes",
+  "descripcion": "Los juguetes mas increibles para los pequeños del hogar.",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67cb9fa7f2cec9844833c2fd"
+  },
+  "nombre": "Automotriz",
+  "descripcion": "Todos los accesorios para el vehiculo y los aceites mas eficientes... hey! Eso rimo!",
+  "status": true
+}]

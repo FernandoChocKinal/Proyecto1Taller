@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "56d30c2c-6ac7-4ce8-ad51-b678d3e68c4d",
+		"name": "FACTURAS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42798822"
+	},
+	"item": [
+		{
+			"name": "procesarFactura",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiOTA4ZWNiNTllZGM1YWE4ZGYzYzQiLCJpYXQiOjE3NDE0MDA4MTksImV4cCI6MTc0MTQ4NzIxOX0.MyMDnfTnmBSX9ZYdoUqK-AmyC8GHgqoyDFX9wW89GGQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"usuario\": {\r\n    \"_id\": \"67cb908ecb59edc5aa8df3c4\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/factura/procesarCompra",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"factura",
+						"procesarCompra"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editarProductoFactura",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNjBlYzlkNDUzMTM5ZmQxODI2OTEiLCJpYXQiOjE3NDEzOTU1ODMsImV4cCI6MTc0MTQ4MTk4M30.NE868y4dH8CcXvgV4Fq4mTnD4niWkxadUFO5GIdLhR8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productos\": [\r\n      {\r\n        \"idProducto\": \"67cba65accd6fcfec0673dd1\",\r\n        \"cantidad\": \"1\",\r\n        \"precioProducto\": \"199.99\",\r\n        \"nombreProducto\": \"Kit de destornilladores\"\r\n      }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/factura/editarFactura/67cbac87ccd6fcfec0673e42",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"factura",
+						"editarFactura",
+						"67cbac87ccd6fcfec0673e42"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerFactura",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiOTA4ZWNiNTllZGM1YWE4ZGYzYzQiLCJpYXQiOjE3NDE0MDA4MTksImV4cCI6MTc0MTQ4NzIxOX0.MyMDnfTnmBSX9ZYdoUqK-AmyC8GHgqoyDFX9wW89GGQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"usuario\": {\r\n    \"_id\": \"67cb908ecb59edc5aa8df3c4\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/factura/obtenerFacturasPorUsuario",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"factura",
+						"obtenerFacturasPorUsuario"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "67cbac87ccd6fcfec0673e42"
+  },
+  "idUsuario": {
+    "$oid": "67cb908ecb59edc5aa8df3c4"
+  },
+  "productos": [
+    {
+      "idProducto": {
+        "$oid": "67cba65accd6fcfec0673dd1"
+      },
+      "nombreProducto": "Kit de destornilladores",
+      "cantidad": 1,
+      "precioProducto": 199.99,
+      "_id": {
+        "$oid": "67cbadbfccd6fcfec0673e73"
+      }
+    }
+  ],
+  "total": 199.99,
+  "fecha": {
+    "$date": "2025-03-08T02:33:43.654Z"
+  },
+  "createdAt": {
+    "$date": "2025-03-08T02:33:43.656Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:38:55.117Z"
+  }
+}]

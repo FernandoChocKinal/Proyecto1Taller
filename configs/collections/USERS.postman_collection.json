@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "22bf4b05-3594-40c5-a7e0-a18ae3d65708",
+		"name": "USERS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42798822"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Sabrina\",\r\n  \"surname\": \"Carpintera\",\r\n  \"username\": \"SABRINA CARP\",\r\n  \"email\": \"pleasesab@gmail.com\",\r\n  \"phone\": \"11051999\",\r\n  \"password\": \"esprexoooo\",\r\n  \"role\": \"CLIENT_ROLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"ELVIS GEDEON\",\r\n  \"password\": \"qwerty123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var template = `\r",
+							"<style type=\"text/css\">\r",
+							"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+							"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+							"    .tftable tr {background-color:#ffffff;}\r",
+							"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+							"    .tftable tr:hover {background-color:#e0ffff;}\r",
+							"</style>\r",
+							"\r",
+							"<table class=\"tftable\" border=\"1\">\r",
+							"    <tr>\r",
+							"        <th>Name</th>\r",
+							"        <th>Surname</th>\r",
+							"        <th>Username</th>\r",
+							"        <th>Email</th>\r",
+							"        <th>Phone</th>\r",
+							"        <th>Role</th>\r",
+							"        <th>Status</th>\r",
+							"        <th>UID</th>\r",
+							"    </tr>\r",
+							"    \r",
+							"    {{#each response.users}}\r",
+							"        <tr>\r",
+							"            <td>{{name}}</td>\r",
+							"            <td>{{surname}}</td>\r",
+							"            <td>{{username}}</td>\r",
+							"            <td>{{email}}</td>\r",
+							"            <td>{{phone}}</td>\r",
+							"            <td>{{role}}</td>\r",
+							"            <td>{{status}}</td>\r",
+							"            <td>{{uid}}</td>\r",
+							"        </tr>\r",
+							"    {{/each}}\r",
+							"</table>\r",
+							"`;\r",
+							"\r",
+							"function constructVisualizerPayload() {\r",
+							"  return {response: pm.response.json()}\r",
+							"}\r",
+							"\r",
+							"pm.visualizer.set(template, constructVisualizerPayload());"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNjBlYzlkNDUzMTM5ZmQxODI2OTEiLCJpYXQiOjE3NDEzOTU1ODMsImV4cCI6MTc0MTQ4MTk4M30.NE868y4dH8CcXvgV4Fq4mTnD4niWkxadUFO5GIdLhR8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Josias\",\r\n  \"surname\": \"Choc\",\r\n  \"username\": \"JOSIAS CHOC\",\r\n  \"email\": \"jchocbaltazar@gmail.com\",\r\n  \"phone\": \"12121212\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/user/updateUser/67cb8e87cb59edc5aa8df3bc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"user",
+						"updateUser",
+						"67cb8e87cb59edc5aa8df3bc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cambiarPassword",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNjBlYzlkNDUzMTM5ZmQxODI2OTEiLCJpYXQiOjE3NDEzOTU1ODMsImV4cCI6MTc0MTQ4MTk4M30.NE868y4dH8CcXvgV4Fq4mTnD4niWkxadUFO5GIdLhR8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"oldPassword\": \"Josineitor123\",\r\n  \"newPassword\": \"JOSIAS012014\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/user/updatePassword/67cb8e87cb59edc5aa8df3bc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"user",
+						"updatePassword",
+						"67cb8e87cb59edc5aa8df3bc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNjBlYzlkNDUzMTM5ZmQxODI2OTEiLCJpYXQiOjE3NDEzOTU1ODMsImV4cCI6MTc0MTQ4MTk4M30.NE868y4dH8CcXvgV4Fq4mTnD4niWkxadUFO5GIdLhR8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"password\": \"SkibidiLUIS\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/user/eliminarCuenta/67cb914dcb59edc5aa8df3cc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"user",
+						"eliminarCuenta",
+						"67cb914dcb59edc5aa8df3cc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificarRol",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNjBlYzlkNDUzMTM5ZmQxODI2OTEiLCJpYXQiOjE3NDEzOTU1ODMsImV4cCI6MTc0MTQ4MTk4M30.NE868y4dH8CcXvgV4Fq4mTnD4niWkxadUFO5GIdLhR8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"newRole\": \"ADMIN_ROLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/user/updateRole/67cb90e7cb59edc5aa8df3c8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"user",
+						"updateRole",
+						"67cb90e7cb59edc5aa8df3c8"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

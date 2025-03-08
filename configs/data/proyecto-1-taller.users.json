@@ -1,0 +1,117 @@
+[{
+  "_id": {
+    "$oid": "67cb60ec9d453139fd182691"
+  },
+  "name": "Fernando David",
+  "surname": "Choc Baltazar",
+  "username": "fchoc2020619",
+  "email": "fchoc@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$crUzqBIPtCxtquY3oO/Nqw$sZQ6gji5uwk5CRgphM6wBqKMoAUhT0qLcOMHwb2wFfs",
+  "phone": "36777763",
+  "role": "ADMIN_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67cb8e87cb59edc5aa8df3bc"
+  },
+  "name": "Josias",
+  "surname": "Choc",
+  "username": "JOSIAS CHOC",
+  "email": "jchocbaltazar@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$z8UiMv9ltBZBuIJuFKZKDw$rh8Tzie8cmjKVdwrBSfK0+sBCHFxBHhKeBVKksmyhXg",
+  "phone": "12121212",
+  "role": "ADMIN_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67cb904fcb59edc5aa8df3c0"
+  },
+  "name": "Emmanuel",
+  "surname": "Matias",
+  "username": "EMANUELMATT",
+  "email": "emmanuelm@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$yOUyjokV1DpPzpdgDJZhjA$HdeieJzetKA7eeEJbN7rfSl84wRtSsiHhUNxmD9mCmI",
+  "phone": "87654321",
+  "role": "CLIENT_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67cb908ecb59edc5aa8df3c4"
+  },
+  "name": "Elvis",
+  "surname": "Choc",
+  "username": "ELVIS GEDEON",
+  "email": "elvischoc@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$ir5RR1PAXBi491hzb76vFw$bXLm032mZvqHh4W/BjkM+RE/pPWcfZo27RbVi6xnYA4",
+  "phone": "56560606",
+  "role": "CLIENT_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67cb90e7cb59edc5aa8df3c8"
+  },
+  "name": "Claudia",
+  "surname": "Hernandez",
+  "username": "CLAU HERNANDEZ",
+  "email": "cbaltazar60@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$k4Iz+lPYS7bvqZ6iT7Qs8Q$DtByQzdPDMuGPbVVVZIE4hgKUD+s2djkambEZrIGhEU",
+  "phone": "04041983",
+  "role": "ADMIN_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67cb91cacb59edc5aa8df3d0"
+  },
+  "name": "John",
+  "surname": "Lennon",
+  "username": "JOHNNYBOY",
+  "email": "johnnylenny@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$qlpMNFPR9TGPRm1pMzAXYQ$fRmFoDsIjODIiD4x0MYOSYlosh/zDe85afj6Hw/wfzI",
+  "phone": "09101940",
+  "role": "ADMIN_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67cb924fcb59edc5aa8df3d4"
+  },
+  "name": "Paul",
+  "surname": "McCartney",
+  "username": "PAUL RAMon",
+  "email": "paulmacca@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$NLhu19/MuPc86ldj66tXuQ$nVrAjjyAL/uKCCWMxtmwhITTqmOKC2GDgskFhF7zV9M",
+  "phone": "18061942",
+  "role": "ADMIN_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67cb9292cb59edc5aa8df3d8"
+  },
+  "name": "Mick",
+  "surname": "Jagger",
+  "username": "MICKEYJAGG",
+  "email": "jagger@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$vMUWgoKMbt45bvmksk4DkQ$3hfX2E0TplOQyHlSO4PQLR79WPBR/AeXQtmbkvFSnC0",
+  "phone": "26071943",
+  "role": "ADMIN_ROLE",
+  "status": true
+},
+{
+  "_id": {
+    "$oid": "67cb9305cb59edc5aa8df3dc"
+  },
+  "name": "Sabrina",
+  "surname": "Carpintera",
+  "username": "SABRINA CARP",
+  "email": "pleasesab@gmail.com",
+  "password": "$argon2id$v=19$m=65536,t=3,p=4$q2dyxnu7sOvxFzp45wi/AA$eE+NHcEVz4eKeHAA+0/sDRebpmZWRwsufsWtQIHNKEA",
+  "phone": "11051999",
+  "role": "CLIENT_ROLE",
+  "status": true
+}]

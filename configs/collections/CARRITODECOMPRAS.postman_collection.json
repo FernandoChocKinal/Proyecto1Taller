@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "f83f2542-d886-46bd-8ded-caac640c46f8",
+		"name": "CARRITODECOMPRAS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42798822"
+	},
+	"item": [
+		{
+			"name": "agregarAlCarrito",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiOTA4ZWNiNTllZGM1YWE4ZGYzYzQiLCJpYXQiOjE3NDE0MDA4MTksImV4cCI6MTc0MTQ4NzIxOX0.MyMDnfTnmBSX9ZYdoUqK-AmyC8GHgqoyDFX9wW89GGQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"idProducto\": \"67cba736ccd6fcfec0673de5\", \r\n\"cantidad\": \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/carrito/agregarProducto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"carrito",
+						"agregarProducto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarCarrito",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiOTA4ZWNiNTllZGM1YWE4ZGYzYzQiLCJpYXQiOjE3NDE0MDA4MTksImV4cCI6MTc0MTQ4NzIxOX0.MyMDnfTnmBSX9ZYdoUqK-AmyC8GHgqoyDFX9wW89GGQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/carrito/listarCarrito",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"carrito",
+						"listarCarrito"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarProducto",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiOTA4ZWNiNTllZGM1YWE4ZGYzYzQiLCJpYXQiOjE3NDE0MDA4MTksImV4cCI6MTc0MTQ4NzIxOX0.MyMDnfTnmBSX9ZYdoUqK-AmyC8GHgqoyDFX9wW89GGQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/carrito/eliminarProducto/67cba736ccd6fcfec0673de5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"carrito",
+						"eliminarProducto",
+						"67cba736ccd6fcfec0673de5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

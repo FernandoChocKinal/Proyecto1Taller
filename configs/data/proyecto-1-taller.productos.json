@@ -1,0 +1,340 @@
+[{
+  "_id": {
+    "$oid": "67cba3dfccd6fcfec0673d9a"
+  },
+  "nombreProducto": "Acetaminofen",
+  "descripcionProducto": "Medicina para el dolor de cabeza y mas",
+  "precioProducto": 1.5,
+  "stock": 200,
+  "vendidos": 0,
+  "categoria": {
+    "$oid": "67cb9f07f2cec9844833c2f4"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-08T01:56:47.098Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T01:56:47.098Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cba41eccd6fcfec0673d9f"
+  },
+  "nombreProducto": "Leche entera, 1 Lt.",
+  "descripcionProducto": "Leche Foremost, 1 lt",
+  "precioProducto": 10.99,
+  "stock": 150,
+  "vendidos": 0,
+  "categoria": {
+    "$oid": "67cb9e65f2cec9844833c2eb"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-08T01:57:50.065Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:36:55.307Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cba446ccd6fcfec0673da4"
+  },
+  "nombreProducto": "Coca-Cola, Lata",
+  "descripcionProducto": "Lata de Coca-Cola",
+  "precioProducto": 5.75,
+  "stock": 200,
+  "vendidos": 0,
+  "categoria": {
+    "$oid": "67cb9e65f2cec9844833c2eb"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-08T01:58:30.016Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:36:55.310Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cba488ccd6fcfec0673da9"
+  },
+  "nombreProducto": "Salsa Natura's",
+  "descripcionProducto": "Salsa Natura's Original porque la libra de tomate esta bien cara.",
+  "precioProducto": 6.5,
+  "stock": 100,
+  "vendidos": 0,
+  "categoria": {
+    "$oid": "67cb9e65f2cec9844833c2eb"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-08T01:59:36.331Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T01:59:36.331Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cba4cfccd6fcfec0673dae"
+  },
+  "nombreProducto": "Crema Nivea mediana",
+  "descripcionProducto": "Crema original Nivea para la carita hermosa del cliente",
+  "precioProducto": 10.5,
+  "stock": 200,
+  "vendidos": 0,
+  "categoria": {
+    "$oid": "67cb9e99f2cec9844833c2ee"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-08T02:00:47.259Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:00:47.259Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cba4f6ccd6fcfec0673db3"
+  },
+  "nombreProducto": "Jabon Zote",
+  "descripcionProducto": "El mejor jabon del mundo",
+  "precioProducto": 5.99,
+  "stock": 200,
+  "vendidos": 0,
+  "categoria": {
+    "$oid": "67cb9e99f2cec9844833c2ee"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-08T02:01:26.026Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:01:26.026Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cba53eccd6fcfec0673db8"
+  },
+  "nombreProducto": "Gelatina Moco de Gorila",
+  "descripcionProducto": "Fijador Gel Moco de Gorila Mediano",
+  "precioProducto": 11.99,
+  "stock": 125,
+  "vendidos": 0,
+  "categoria": {
+    "$oid": "67cb9e99f2cec9844833c2ee"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-08T02:02:38.499Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:02:38.499Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cba570ccd6fcfec0673dbd"
+  },
+  "nombreProducto": "Alcohol Etilico",
+  "descripcionProducto": "Alcohol Etilico pequeño",
+  "precioProducto": 7.99,
+  "stock": 150,
+  "vendidos": 0,
+  "categoria": {
+    "$oid": "67cb9f07f2cec9844833c2f4"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-08T02:03:28.538Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:03:28.538Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cba5a2ccd6fcfec0673dc2"
+  },
+  "nombreProducto": "Tabcin Gripe y Tos",
+  "descripcionProducto": "Antigripal Tabcin",
+  "precioProducto": 2,
+  "stock": 175,
+  "vendidos": 0,
+  "categoria": {
+    "$oid": "67cb9f07f2cec9844833c2f4"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-08T02:04:18.552Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:36:55.312Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cba5e3ccd6fcfec0673dc7"
+  },
+  "nombreProducto": "Serrucho",
+  "descripcionProducto": "Serrucho para madera",
+  "precioProducto": 37.95,
+  "stock": 100,
+  "vendidos": 0,
+  "categoria": {
+    "$oid": "67cb9f38f2cec9844833c2f7"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-08T02:05:23.333Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:05:23.333Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cba5ffccd6fcfec0673dcc"
+  },
+  "nombreProducto": "Caja de clavos",
+  "descripcionProducto": "caja de 200 clavos",
+  "precioProducto": 20,
+  "stock": 100,
+  "vendidos": 0,
+  "categoria": {
+    "$oid": "67cb9f38f2cec9844833c2f7"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-08T02:05:51.481Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:05:51.481Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cba65accd6fcfec0673dd1"
+  },
+  "nombreProducto": "Kit de destornilladores",
+  "descripcionProducto": "Kit con 37 tipos diferentes de destornilladores",
+  "precioProducto": 199.99,
+  "stock": 149,
+  "vendidos": 1,
+  "categoria": {
+    "$oid": "67cb9f38f2cec9844833c2f7"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-08T02:07:22.496Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:38:55.120Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cba6a7ccd6fcfec0673dd6"
+  },
+  "nombreProducto": "Max Steel Accion Turbo",
+  "descripcionProducto": "Juguete de accion Max Steel Matel",
+  "precioProducto": 99,
+  "stock": 250,
+  "vendidos": 0,
+  "categoria": {
+    "$oid": "67cb9f63f2cec9844833c2fa"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-08T02:08:39.506Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:08:39.506Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cba6d2ccd6fcfec0673ddb"
+  },
+  "nombreProducto": "Muñeca Barbie MATTEL",
+  "descripcionProducto": "muñeca barbie",
+  "precioProducto": 100,
+  "stock": 250,
+  "vendidos": 0,
+  "categoria": {
+    "$oid": "67cb9f63f2cec9844833c2fa"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-08T02:09:22.597Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:09:22.597Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cba704ccd6fcfec0673de0"
+  },
+  "nombreProducto": "Set LEGO MARVEL",
+  "descripcionProducto": "Set de 200 pcs de LEGO MARVEL",
+  "precioProducto": 998.99,
+  "stock": 225,
+  "vendidos": 0,
+  "categoria": {
+    "$oid": "67cb9f63f2cec9844833c2fa"
+  },
+  "status": false,
+  "createdAt": {
+    "$date": "2025-03-08T02:10:12.438Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:16:20.061Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cba736ccd6fcfec0673de5"
+  },
+  "nombreProducto": "Aromatizante para AUTO Y MOTO",
+  "descripcionProducto": "Sabor FRESA",
+  "precioProducto": 8.75,
+  "stock": 200,
+  "vendidos": 0,
+  "categoria": {
+    "$oid": "67cb9fa7f2cec9844833c2fd"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-08T02:11:02.365Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:15:21.457Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67cba753ccd6fcfec0673dea"
+  },
+  "nombreProducto": "Cobertor para Auto",
+  "descripcionProducto": "Cobertor para Auto color NEGRO",
+  "precioProducto": 49.99,
+  "stock": 100,
+  "vendidos": 0,
+  "categoria": {
+    "$oid": "67cb9fa7f2cec9844833c2fd"
+  },
+  "status": true,
+  "createdAt": {
+    "$date": "2025-03-08T02:11:31.538Z"
+  },
+  "updatedAt": {
+    "$date": "2025-03-08T02:11:31.538Z"
+  }
+}]

@@ -1,0 +1,163 @@
+{
+	"info": {
+		"_postman_id": "7c44710e-a0b3-4d7c-bc46-49f7fb2ba4a0",
+		"name": "CATEGORIA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42798822"
+	},
+	"item": [
+		{
+			"name": "registrarCategoria",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNjBlYzlkNDUzMTM5ZmQxODI2OTEiLCJpYXQiOjE3NDEzOTU1ODMsImV4cCI6MTc0MTQ4MTk4M30.NE868y4dH8CcXvgV4Fq4mTnD4niWkxadUFO5GIdLhR8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nombre\": \"Automotriz\",\r\n\"descripcion\": \"Todos los accesorios para el vehiculo y los aceites mas eficientes... hey! Eso rimo!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/categoria/crearCategoria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"categoria",
+						"crearCategoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listarCategoria",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNjBlYzlkNDUzMTM5ZmQxODI2OTEiLCJpYXQiOjE3NDEzOTU1ODMsImV4cCI6MTc0MTQ4MTk4M30.NE868y4dH8CcXvgV4Fq4mTnD4niWkxadUFO5GIdLhR8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/categoria/listarCategorias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"categoria",
+						"listarCategorias"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editarCategoria",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNjBlYzlkNDUzMTM5ZmQxODI2OTEiLCJpYXQiOjE3NDEzOTU1ODMsImV4cCI6MTc0MTQ4MTk4M30.NE868y4dH8CcXvgV4Fq4mTnD4niWkxadUFO5GIdLhR8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nombre\": \"Ferreteria\",\r\n\"descripcion\": \"De todo para las reparaciones del hogar!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/categoria/editarCategoria/67cb9f38f2cec9844833c2f7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"categoria",
+						"editarCategoria",
+						"67cb9f38f2cec9844833c2f7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarCategoria",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2N2NiNjBlYzlkNDUzMTM5ZmQxODI2OTEiLCJpYXQiOjE3NDEzOTU1ODMsImV4cCI6MTc0MTQ4MTk4M30.NE868y4dH8CcXvgV4Fq4mTnD4niWkxadUFO5GIdLhR8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/gestorDeVentas/v1/categoria/eliminarCategoria/67cb9ed3f2cec9844833c2f1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"gestorDeVentas",
+						"v1",
+						"categoria",
+						"eliminarCategoria",
+						"67cb9ed3f2cec9844833c2f1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
